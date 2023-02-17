@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toast.makeText(getApplicationContext(),"C возвращением!",Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Created");
+        Log.w(TAG,"Открыто");
 
 
     }
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         Toast.makeText(getApplicationContext(),"Хорошего дня!",Toast.LENGTH_SHORT).show();
-        Log.w(TAG,"ВНИМАНИЕ!");
+        Log.i(TAG, "Вышел");
         if (isFinishing()){
             finish();
         }
@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        Toast.makeText(getApplicationContext(),"On Destroy",Toast.LENGTH_SHORT).show();
-        Log.v(TAG,"Destroy is the off of programm....");
+        Toast.makeText(getApplicationContext(),"До свидания!",Toast.LENGTH_SHORT).show();
+        Log.v(TAG,"Off programm");
         super.onDestroy();
         finish();
 
@@ -45,15 +45,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.wtf(TAG, "Lol, i dont know what happened");
+        Log.wtf(TAG, "What happened");
+        Log.d(TAG, "Debug msg");
         Toast.makeText(getApplicationContext(),"On Pause",Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.wtf(TAG,"wtf");
-        Log.d(TAG, "Debug msg");
-        Toast.makeText(getApplicationContext(),"On Resume",Toast.LENGTH_SHORT).show();
+        Log.wtf(TAG,"Hmmm...");
+        Toast.makeText(getApplicationContext(),"Метро Люблино работаем",Toast.LENGTH_SHORT).show();
     }
 }
