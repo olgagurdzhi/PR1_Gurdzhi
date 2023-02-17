@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(getApplicationContext(),"On Create",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"C возвращением!",Toast.LENGTH_SHORT).show();
         Log.i(TAG, "Created");
 
 
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-        Toast.makeText(getApplicationContext(),"On stop Toast",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Хорошего дня!",Toast.LENGTH_SHORT).show();
         Log.w(TAG,"ВНИМАНИЕ!");
         if (isFinishing()){
             finish();
